@@ -52,6 +52,7 @@
 								</div>
 								<div class="section">
 									<button class="default" id="button-logon-with-password" onclick="signInWithPassword()" style="display: none;">Sign In</button>
+									<button class="default" id="button-register-Webauth-logon" onclick="window.location = 'fidoregister.html'"style="display: none;">Register for Windows Hello</button>
 									<button class="default" id="button-logon-with-windows-hello" onclick="getAssertion()" style="display: none;">Sign In with Windows Hello</button>
 								</div>
 								<div class="row small" id="register">
@@ -75,16 +76,17 @@
 		})();
 		
 		function addPasswordField() {
+			document.getElementById("button-register-Webauth-logon").style.display = "block";
 			document.getElementById("button-logon-with-password").style.display = "block";
 			document.getElementById("input-password").style.display = "block";
-			document.getElementById("button-logon-with-windows-hello").style.display = "none";
+			document.getElementById("button-logon-with-windows-hello").style.display = "block";
 			document.getElementById("link-sign-in-with-password").style.display = "none";
 		}
 		function hidePasswordField() {
 			document.getElementById("button-logon-with-password").style.display = "none";
 			document.getElementById("input-password").style.display = "none";
 			document.getElementById("button-logon-with-windows-hello").style.display = "block";
-			document.getElementById("link-sign-in-with-password").style.display = "block";
+			document.getElementById("link-sign-in-with-password").style.display = "none";
 		}
 </script>
 </body>
